@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
     Boolean execucao=false;
@@ -22,6 +23,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ToggleButton tbBut=(ToggleButton) findViewById(R.id.tbStartStop);
+        tbBut.setText("Iniciar");
+        tbBut.isChecked();
+        tbBut.setTextOn("Pausar");
+        tbBut.setTextOff("Retornar");
     }
     protected void onStart(){
         super.onStart();
@@ -34,11 +40,17 @@ public class MainActivity extends AppCompatActivity {
             criado=true;
         }
     }
-
     public void onClickStart(View view){
-        if(!execucao){
-            execucao=true;
+        if(((ToggleButton)view).isChecked()){
+            if(!execucao){
+                execucao=true;
+            }
+        }else{
+            if(execucao) {
+                execucao = false;
+            }
         }
+
     }
     public void onClickStop(View view){
         if(execucao) {

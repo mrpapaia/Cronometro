@@ -24,42 +24,16 @@
         app:layout_constraintTop_toTopOf="@+id/pbSegundos" />
 
     <Button
-        android:id="@+id/btStart"
-        android:layout_width="282dp"
-        android:layout_height="70dp"
-        android:onClick="onClickStart"
-        android:text="Start"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvContador"
-        app:layout_constraintVertical_bias="0.449" />
-
-    <Button
-        android:id="@+id/BtStop"
-        android:layout_width="282dp"
-        android:layout_height="70dp"
-        android:onClick="onClickStop"
-        android:text="Stop"
-        app:layout_constraintBottom_toTopOf="@+id/btRestart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btStart"
-        app:layout_constraintVertical_bias="0.509" />
-
-    <Button
         android:id="@+id/btRestart"
         android:layout_width="282dp"
         android:layout_height="70dp"
-        android:layout_marginBottom="16dp"
         android:onClick="onClickRestart"
         android:text="Restart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbStartStop" />
 
     <ProgressBar
         android:id="@+id/pbSegundos"
@@ -106,5 +80,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.257" />
+
+    <ToggleButton
+        android:id="@+id/tbStartStop"
+        android:layout_width="282dp"
+        android:layout_height="70dp"
+        android:onClick="onClickStart"
+        android:text="aaaaa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvContador"
+        app:layout_constraintVertical_bias="0.449" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
