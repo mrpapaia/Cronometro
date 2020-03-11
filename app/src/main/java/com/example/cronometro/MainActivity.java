@@ -34,11 +34,7 @@ public class MainActivity extends AppCompatActivity {
             criado=true;
         }
     }
-    protected void onPause(){
-        super.onPause();
 
-
-    }
 
     public void onClickStart(View view){
         if(!execucao){
@@ -55,9 +51,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-
-
     private void runTime(){
 
         Drawable seg = getDrawable(R.drawable.circularsegundos);
