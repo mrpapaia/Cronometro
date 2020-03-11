@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
     public void onClickStart(View view){
         if(!execucao){
             execucao=true;
