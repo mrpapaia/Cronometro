@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvContador"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="00:00:00"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/pbSegundos"
+        app:layout_constraintEnd_toEndOf="@+id/pbSegundos"
+        app:layout_constraintStart_toStartOf="@+id/pbSegundos"
+        app:layout_constraintTop_toTopOf="@+id/pbSegundos" />
+
+    <Button
+        android:id="@+id/btStart"
+        android:layout_width="282dp"
+        android:layout_height="70dp"
+        android:onClick="onClickStart"
+        android:text="Start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvContador"
+        app:layout_constraintVertical_bias="0.449" />
+
+    <Button
+        android:id="@+id/BtStop"
+        android:layout_width="282dp"
+        android:layout_height="70dp"
+        android:onClick="onClickStop"
+        android:text="Stop"
+        app:layout_constraintBottom_toTopOf="@+id/btRestart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btStart"
+        app:layout_constraintVertical_bias="0.509" />
+
+    <Button
+        android:id="@+id/btRestart"
+        android:layout_width="282dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="onClickRestart"
+        android:text="Restart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pbSegundos"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+        android:layout_width="208dp"
+        android:layout_height="180dp"
+
+        android:indeterminate="false"
+        android:max="60"
+        android:progress="0"
+
+        android:progressDrawable="@drawable/circularsegundos"
+        app:layout_constraintBottom_toBottomOf="@+id/pbMinutos"
+        app:layout_constraintEnd_toEndOf="@+id/pbMinutos"
+        app:layout_constraintStart_toStartOf="@+id/pbMinutos"
+        app:layout_constraintTop_toTopOf="@+id/pbMinutos" />
+
+    <ProgressBar
+        android:id="@+id/pbMinutos"
+        style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal"
+        android:layout_width="238dp"
+        android:layout_height="309dp"
+        android:indeterminate="false"
+        android:max="60"
+        android:progress="0"
+        android:progressDrawable="@drawable/circularminutos"
+        app:layout_constraintBottom_toBottomOf="@+id/pbHoras"
+        app:layout_constraintEnd_toEndOf="@+id/pbHoras"
+        app:layout_constraintStart_toStartOf="@+id/pbHoras"
+        app:layout_constraintTop_toTopOf="@+id/pbHoras" />
+
+    <ProgressBar
+        android:id="@+id/pbHoras"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="364dp"
+        android:layout_height="316dp"
+        android:indeterminate="false"
+        android:max="24"
+        android:progress="0"
+        android:progressDrawable="@drawable/circularhoras"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.257" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
